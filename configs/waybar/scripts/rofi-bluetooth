@@ -305,7 +305,7 @@ show_menu() {
 }
 
 # Rofi command to pipe into, can add any options here
-rofi_command="rofi -dmenu -no-fixed-num-lines -yoffset -100 -i -p"
+rofi_command="rofi -dmenu -no-fixed-num-lines -yoffset -100 -i -p -theme /home/arjun/.config/bspwm/rices/andrea/launcher.rasi"
 
 case "$1" in
     --status)
