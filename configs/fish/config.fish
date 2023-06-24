@@ -15,6 +15,12 @@ export GIT_DISCOVERY_ACROSS_FILESYSTEM=1
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 set BROWSER brave
 ######## Alias ########
+set office "/app/onlyoffice/DocumentServer/lib/documentserver-example/files/172.18.0.1/"
+
+alias clean='yay -Rns $(yay -Qdtq)'
+alias sizeof="du -hsx * | sort -rh"
+alias homevol='cd "/run/media/arjun/New Volume"'
+alias ports='sudo lsof -i -P -n | grep LISTEN'
 alias gui='gitui'
 alias l='ls'
 alias mountup='sudo mkdir -p /run/media/arjun/New\ Volume/ && sudo mount /dev/nvme0n1p2 /run/media/arjun/New\ Volume/'
@@ -41,7 +47,6 @@ alias nexttail='npx create-next-app@latest --example with-tailwindcss'
 alias imview='kitty +kitten icat'
 alias gitdir='cd "/run/media/arjun/New Volume/code and stuff/git"'
 alias docker='sudo docker '
-alias stabledif='cd "/run/media/arjun/New Volume/Shared/apps/stable-diffusion-webui"' 
 #LS_COLORS=$LS_COLORS:'ow=1;34:' ; export LS_COLORS
 #~/.local/bin/colorscript -r
 # Import colorscheme from 'wal' asynchronously
