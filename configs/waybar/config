@@ -50,36 +50,36 @@
           }
     },
     "clock": {
-      "format": "<span color='#e8ddd9'> </span>{:%H:%M}",
-      "format-alt": "<span foreground='#e8ddd9'> </span><span>{:%I:%M %p %a %d}</span>",
+      "format": "<span color='#ebe6e2'> </span>{:%H:%M}",
+      "format-alt": "<span foreground='#ebe6e2'> </span><span>{:%I:%M %p %a %d}</span>",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "backlight": {
       "device": "amdgpu_b10",
-      "format": "<span color='#e8ddd9'>{icon}</span> {percent}%",
+      "format": "<span color='#ebe6e2'>{icon}</span> {percent}%",
       "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "custom/sound": {
-      "format": "<span color='#e8ddd9'> </span>{}",
+      "format": "<span color='#ebe6e2'> </span>{}",
       "exec": "custom-alsa.sh",
     },
     "network": {
       "interface": "wlan0",
       "format": "{ifname}",
-      "format-wifi": "<span color='#e8ddd9'> </span>{essid}({signalStrength}%)",
+      "format-wifi": "<span color='#ebe6e2'> </span>{essid}({signalStrength}%)",
       "format-ethernet": "{ipaddr}/{cidr} ",
-      "format-disconnected": "<span color='#e8ddd9'>󰖪 </span>No Network",
+      "format-disconnected": "<span color='#ebe6e2'>󰖪 </span>No Network",
       "on-click": "kitty nmtui"
     },
     "battery": {
-      "format": "<span color='#e8ddd9'>{icon}</span> {capacity}%",
+      "format": "<span color='#ebe6e2'>{icon}</span> {capacity}%",
       "format-icons": ["", "", "", "", "", "", "", "", "", ""],
-      "format-charging": "<span color='#e8ddd9'></span> {capacity}%"
+      "format-charging": "<span color='#ebe6e2'></span> {capacity}%"
     },
     "pulseaudio": {
       "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-      "format": "<span color='#e8ddd9'></span> {volume}%",
-      "format-muted": "<span color='#e8ddd9'>ﱝ</span>",
+      "format": "<span color='#ebe6e2'></span> {volume}%",
+      "format-muted": "<span color='#ebe6e2'>ﱝ</span>",
       "format-icons": {
        "headphone": "",
        "hands-free": "",
@@ -92,7 +92,7 @@
     "on-click-right" : "pavucontrol"
     },
     "memory": {
-    "format": "<span foreground='#e8ddd9'></span> {}%",
+    "format": "<span foreground='#ebe6e2'></span> {}%",
     "on-click": "kitty htop"
     },
     "tray": {
@@ -101,11 +101,11 @@
     "spacing": 6
     },
     "cpu": {
-    "format": "<span foreground='#e8ddd9'></span>  {usage}%"
+    "format": "<span foreground='#ebe6e2'></span>  {usage}%"
      },
      "temperature": {
     "critical-threshold": 80,
-    "format": "<span foreground='#e8ddd9'></span> {temperatureC}°C"
+    "format": "<span foreground='#ebe6e2'></span> {temperatureC}°C"
      },
     "custom/playerctl": {
      "format": "{icon}  <span>{}</span>",
@@ -116,8 +116,8 @@
      "on-click": "playerctl play-pause",
      "on-click-right": "playerctl next",
      "format-icons": {
-       "Paused": "<span foreground='#e8ddd9'></span>",
-       "Playing": "<span foreground='#e8ddd9'></span>"
+       "Paused": "<span foreground='#ebe6e2'></span>",
+       "Playing": "<span foreground='#ebe6e2'></span>"
      }
      }
      

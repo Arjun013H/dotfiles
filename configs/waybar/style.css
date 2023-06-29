@@ -13,7 +13,7 @@ window#waybar {
 #custom-arch, #workspaces {
   border-radius: 10px;
   background-color: #000001;
-  color:#BB2450;
+  color:#DB2B22;
   margin-top: 5px;
 	margin-right: 5px;
   padding-top: 0px;
@@ -28,18 +28,18 @@ window#waybar {
 
 #workspaces button {
   background: #000001;
-  color:#BB2450;
+  color:#DB2B22;
 
 }
 
 #workspaces button.active {
-  color: #e8ddd9;
+  color: #ebe6e2;
 }
 
 #clock, #backlight, #custom-info-cava,#temperature, #cpu, #pulseaudio, #network, #battery , #tray, #memory ,#custom-playerctl{
   border-radius: 10px;
   background-color: #000001;
-  color:#BB2450;
+  color:#DB2B22;
 
   margin-top: 5px;
   padding-left: 9px;
