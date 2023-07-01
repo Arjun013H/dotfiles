@@ -35,6 +35,7 @@ nvidia_stage=(
 
 #the main packages
 install_stage=(
+    fish
     catppuccin-gtk-theme-mocha
     python-pywal
     swaybg-git
@@ -329,6 +330,8 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     xfconf-query -c xsettings -p /Net/IconThemeName -s "Papirus-Dark"
     gsettings set org.gnome.desktop.interface gtk-theme "Catppuccin-Mocha-Standard-Maroon-dark"
     gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
+    sudo chsh /bin/fish
+    
 fi
 
 ### Install software for Asus ROG laptops ###
