@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# exit
 
 # Script Credit SolDoesTech/HyprV4
 prep_stage=(
@@ -34,6 +35,7 @@ nvidia_stage=(
 
 #the main packages
 install_stage=(
+    python-pywal
     swaybg-git
     gnome-terminal
     kitty 
@@ -264,12 +266,15 @@ read -rep $'[\e[1;33mACTION\e[0m] - Would you like to copy config files? (y,n) '
 if [[ $CFG == "Y" || $CFG == "y" ]]; then
     echo -e "$CNT - Copying config files..."
     
-    mkdir -p ~/arjun
     # copy the HyprV directory
-    cp -R ../dotfiles ~/.
-    # cp -R HyprV ~/.config/
+    
+    dotfiles_folder="$HOME/dotfiles"
 
-    #set the measuring unit
+    if [ -d "$dotfiles_folder" ]; then
+      echo ""
+    else
+      cp -R ../dotfiles ~/.
+ 
     # Setup each appliaction
     # check for existing config folders and backup 
     for DIR in hypr kitty mako swaylock waybar wlogout wofi 
@@ -289,7 +294,8 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     echo -e "$CNT - Setting up the new config..." 
 
     cp -r ~/dotfiles/configs/{fish,hypr,kitty,neofetch,polybar,rofi,waybar,wofi,starship.toml} ~/.config/.
-
+    mkdir ~/wallpaper 
+    cp ~/dotfiles/wallpaper/cityRed_1.jpg ~/wallpaper/
     # add the Nvidia env file to the config (if needed)
     if [[ "$ISNVIDIA" == true ]]; then
         echo -e "\nsource = ~/.config/hypr/env_var_nvidia.conf" >> ~/.config/hypr/hyprland.conf
