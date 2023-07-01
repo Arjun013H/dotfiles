@@ -35,8 +35,8 @@ alias notes='cd "/run/media/arjun/New Volume/Notes/Year 2/4th sem"'
 alias ctf='cd "/run/media/arjun/New Volume/Shared/CTF"'
 alias codedir='cd "/run/media/arjun/New Volume/code and stuff"'
 # confirm before overwriting something
-alias cp="cp -iv"
-alias mv="mv -iv"
+alias cp="cp -v"
+alias mv="mv -v"
 alias rm="rm -v"
 alias py='python'
 alias ls='lsd  --group-directories-first'
