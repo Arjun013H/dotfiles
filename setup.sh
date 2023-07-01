@@ -275,7 +275,11 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
       echo ""
     else
       cp -R ../dotfiles ~/.
- 
+    
+    mkdir ~/apps
+    git clone "https://github.com/Ashborn013/hyperwalset.git" ~/apps
+    rm -r ~/apps/hyperwalset/.git
+
     # Setup each appliaction
     # check for existing config folders and backup 
     for DIR in hypr kitty mako swaylock waybar wlogout wofi 
