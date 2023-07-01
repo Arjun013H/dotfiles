@@ -136,7 +136,7 @@ echo -e "Using $ISVM"
 if [[ $ISVM == *"vm"* ]]; then
     echo -e "$CWR - Please note that VMs are not fully supported and if you try to run this on
     a Virtual Machine there is a high chance this will fail."
-    sudo pacman  -S open-vm-tools
+    sudo pacman  -Syy open-vm-tools
     sleep 1
 fi
 
