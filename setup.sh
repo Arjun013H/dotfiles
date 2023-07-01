@@ -35,6 +35,7 @@ nvidia_stage=(
 
 #the main packages
 install_stage=(
+    catppuccin-gtk-theme-mocha
     python-pywal
     swaybg-git
     gnome-terminal
@@ -321,7 +322,7 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     # setup the first look and feel as dark
     xfconf-query -c xsettings -p /Net/ThemeName -s "Adwaita-dark"
     xfconf-query -c xsettings -p /Net/IconThemeName -s "Papirus-Dark"
-    gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
+    gsettings set org.gnome.desktop.interface gtk-theme "Catppuccin-Mocha-Standard-Maroon-dark"
     gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
 fi
 
