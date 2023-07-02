@@ -375,7 +375,8 @@ if [[ $ROG == "Y" || $ROG == "y" ]]; then
     # add the ROG keybinding file to the config
     echo -e "\nsource = ~/.config/hypr/rog-g15-strix-2021-binds.conf" >> ~/.config/hypr/hyprland.conf
 fi
-
+sudo systemctl enable NetworkManager.service
+sudo systemctl start NetworkManager.service
 ### Script is done ###
 echo -e "$CNT - Script had completed!"
 if [[ "$ISNVIDIA" == true ]]; then 
