@@ -304,10 +304,10 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     cp ~/dotfiles/wallpaper/cityRed_1.jpg ~/wallpaper/
 
     echo "Adding fonts ..."
-    curl -Lo /usr/share/fonts/Only.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/NerdFontsSymbolsOnly.zip"
-    unzip /usr/share/fonts/Only.zip
-    curl -Lo JetBrains.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip"
-    unzip /usr/share/JetBrains.zip
+    sudo curl -Lo /usr/share/fonts/Only.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/NerdFontsSymbolsOnly.zip"
+    sudo unzip /usr/share/fonts/Only.zip
+    sudo curl -Lo JetBrains.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip"
+    sudo unzip /usr/share/JetBrains.zip
     
     fc-cache -fv &>>$INSTLOG
     echo "done...!"
