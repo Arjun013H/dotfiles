@@ -34,6 +34,7 @@ nvidia_stage=(
 
 #the main packages
 install_stage=(
+    filelight
     fish
     catppuccin-gtk-theme-mocha
     python-pywal
