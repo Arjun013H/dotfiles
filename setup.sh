@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# exit
 
 # Script Credit SolDoesTech/HyprV4
 prep_stage=(
@@ -129,6 +128,9 @@ echo -e "$CNT - You are about to execute a script that would attempt to setup Hy
 Please note that Hyprland is still in Beta."
 sleep 1
 
+
+
+
 # attempt to discover if this is a VM or not
 echo -e "$CNT - Checking for Physical or VM..."
 ISVM=$(hostnamectl | grep Chassis)
@@ -136,14 +138,19 @@ echo -e "Using $ISVM"
 if [[ $ISVM == *"vm"* ]]; then
     echo -e "$CWR - Please note that VMs are not fully supported and if you try to run this on
     a Virtual Machine there is a high chance this will fail."
-    # install_software open-vm-tools
     sleep 1
 fi
+
+
+
+
+
 
 # let the user know that we will use sudo
 echo -e "$CNT - This script will run some commands that require sudo. You will be prompted to enter your password.
 If you are worried about entering your password then you may want to review the content of the script."
 sleep 1
+
 
 # give the user an option to exit out
 read -rep $'[\e[1;33mACTION\e[0m] - Would you like to continue with the install (y,n) ' CONTINST
@@ -161,6 +168,8 @@ if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia; then
 else
     ISNVIDIA=false
 fi
+
+
 
 ### Disable wifi powersave mode ###
 read -rep $'[\e[1;33mACTION\e[0m] - Would you like to disable WiFi powersave? (y,n) ' WIFI
@@ -393,3 +402,4 @@ if [[ $HYP == "Y" || $HYP == "y" ]]; then
 else
     exit
 fi
+

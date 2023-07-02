@@ -24,9 +24,9 @@ function check_root() {
 }
 function update_grub() {
     # Update grub config
-    echo_primary 'Updating grub config...'
+    echo_info 'Updating grub config...'
     if [[ -x "$(command -v update-grub)" ]]; then
-        echo_info 'update-grub'
+        echo_title 'update-grub'
         update-grub
 
     elif [[ -x "$(command -v grub-mkconfig)" ]]; then
