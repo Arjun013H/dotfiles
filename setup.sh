@@ -20,7 +20,7 @@ prep_stage=(
     cliphist 
     python-requests 
     pacman-contrib
-    xwayland
+    # xwayland
     wlroots
 )
 
