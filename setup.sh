@@ -20,7 +20,6 @@ prep_stage=(
     cliphist 
     python-requests 
     pacman-contrib
-    # xwayland
     wlroots
 )
 
@@ -66,9 +65,7 @@ install_stage=(
     file-roller
     starship 
     papirus-icon-theme 
-    ttf-jetbrains-mono-nerd 
     noto-fonts-emoji 
-    lxappearance 
     nwg-look-bin
     sddm
 )
