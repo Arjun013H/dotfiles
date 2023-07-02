@@ -36,7 +36,8 @@ nvidia_stage=(
 install_stage=(
     filelight
     fish
-    catppuccin-gtk-theme-mocha
+    catppuccin-gtk-theme-latte
+    neofetch
     python-pywal
     swaybg-git
     gnome-terminal
@@ -52,6 +53,7 @@ install_stage=(
     slurp 
     thunar 
     btop
+    htop
     brave-bin
     mpv
     pamixer 
@@ -338,7 +340,7 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     # setup the first look and feel as dark
     xfconf-query -c xsettings -p /Net/ThemeName -s "Adwaita-dark"
     xfconf-query -c xsettings -p /Net/IconThemeName -s "Papirus-Dark"
-    gsettings set org.gnome.desktop.interface gtk-theme "Catppuccin-Mocha-Standard-Maroon-dark"
+    gsettings set org.gnome.desktop.interface gtk-theme "Catppuccin-Latte-Standard-Maroon-light"
     gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
 
     sudo usermod --shell /bin/fish $(whoami)
