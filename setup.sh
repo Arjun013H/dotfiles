@@ -302,6 +302,16 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     cp -r ~/dotfiles/configs/{fish,hypr,kitty,neofetch,polybar,rofi,waybar,wofi,starship.toml} ~/.config/.
     mkdir ~/wallpaper 
     cp ~/dotfiles/wallpaper/cityRed_1.jpg ~/wallpaper/
+
+    echo "Adding fonts ..."
+    curl -Lo /usr/share/fonts/Only.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/NerdFontsSymbolsOnly.zip"
+    unzip /usr/share/fonts/Only.zip
+    curl -Lo JetBrains.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip"
+    unzip /usr/share/JetBrains.zip
+    
+    fc-cache -fv &>>$INSTLOG
+    echo "done...!"
+
     # add the Nvidia env file to the config (if needed)
     if [[ "$ISNVIDIA" == true ]]; then
         echo -e "\nsource = ~/.config/hypr/env_var_nvidia.conf" >> ~/.config/hypr/hyprland.conf
@@ -311,8 +321,8 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     echo -e "$CNT - Setting up the login screen."
     sudo cp -R ./Extras/tokyo-night-sddm/ /usr/share/sddm/themes/
     sudo chown -R $USER:$USER /usr/share/sddm/themes/tokyo-night-sddm/
-    sudo mkdir /etc/sddm.conf.d
-    echo -e "[Theme]\nCurrent=tokyo-night-sddm" | sudo tee -a /etc/sddm.conf.d/10-theme.conf &>> $INSTLOG
+    # sudo mkdir /etc/sddm.conf.d
+    echo -e "[Theme]\nCurrent=tokyo-night-sddm" | sudo tee -a /etc/sddm.conf &>> $INSTLOG
     WLDIR=/usr/share/wayland-sessions
     if [ -d "$WLDIR" ]; then
         echo -e "$COK - $WLDIR found"
