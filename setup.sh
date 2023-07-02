@@ -277,7 +277,8 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
       echo ""
     else
       cp -R ../dotfiles ~/.
-    
+    fi
+
     mkdir ~/apps
     git clone "https://github.com/Ashborn013/hyperwalset.git" ~/apps
     rm -r ~/apps/hyperwalset/.git
