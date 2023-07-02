@@ -298,7 +298,7 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
 
     # link up the config files
     echo -e "$CNT - Setting up the new config..." 
-
+    
     cp -r ~/dotfiles/configs/{fish,hypr,kitty,neofetch,polybar,rofi,waybar,wofi,starship.toml} ~/.config/.
     mkdir ~/wallpaper 
     cp ~/dotfiles/wallpaper/cityRed_1.jpg ~/wallpaper/
@@ -322,6 +322,7 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     sudo cp -R ./Extras/tokyo-night-sddm/ /usr/share/sddm/themes/
     sudo chown -R $USER:$USER /usr/share/sddm/themes/tokyo-night-sddm/
     # sudo mkdir /etc/sddm.conf.d
+    sddm --example-config > /etc/sddm.conf
     echo -e "[Theme]\nCurrent=tokyo-night-sddm" | sudo tee -a /etc/sddm.conf &>> $INSTLOG
     WLDIR=/usr/share/wayland-sessions
     if [ -d "$WLDIR" ]; then
@@ -339,7 +340,9 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     xfconf-query -c xsettings -p /Net/IconThemeName -s "Papirus-Dark"
     gsettings set org.gnome.desktop.interface gtk-theme "Catppuccin-Mocha-Standard-Maroon-dark"
     gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
-    sudo chsh /bin/fish
+
+    sudo usermod --shell /bin/fish $(whoami)
+
     
 fi
 
