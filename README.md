@@ -1,4 +1,4 @@
 # dotfiles
 my dots
 
-`do not run the setup.sh as it is still in production`
+`Note` the `setup.sh` is to  install hyperland on a fresh boot of arch system 

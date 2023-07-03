@@ -323,6 +323,7 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     fc-cache -fv &>>$INSTLOG
     echo "done...!"
 
+   
     # add the Nvidia env file to the config (if needed)
     if [[ "$ISNVIDIA" == true ]]; then
         echo -e "\nsource = ~/.config/hypr/env_var_nvidia.conf" >> ~/.config/hypr/hyprland.conf
@@ -352,42 +353,17 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     gsettings set org.gnome.desktop.interface gtk-theme "Catppuccin-Latte-Standard-Maroon-light"
     gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
 
+    echo "changeing shell as fish"
     sudo usermod --shell /bin/fish $(whoami)
-
+    echo "Done...!"
     
 fi
 
-### Install software for Asus ROG laptops ###
-read -rep $'[\e[1;33mACTION\e[0m] - For ASUS ROG Laptops - Would you like to install Asus ROG software support? (y,n) ' ROG
-if [[ $ROG == "Y" || $ROG == "y" ]]; then
-    echo -e "$CNT - Adding Keys..."
-    sudo pacman-key --recv-keys 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35 &>> $INSTLOG
-    sudo pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35 &>> $INSTLOG
-    sudo pacman-key --lsign-key 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35 &>> $INSTLOG
-    sudo pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35 &>> $INSTLOG
-
-    LOC="/etc/pacman.conf"
-    echo -e "$CNT - Updating $LOC with g14 repo."
-    echo -e "\n[g14]\nServer = https://arch.asus-linux.org" | sudo tee -a $LOC &>> $INSTLOG
-    echo -e "$CNT - Update the system..."
-    sudo pacman -Suy --noconfirm &>> $INSTLOG
-
-    echo -e "$CNT - Installing ROG pacakges..."
-    install_software asusctl
-    install_software supergfxctl
-    install_software rog-control-center
-
-    echo -e "$CNT - Activating ROG services..."
-    sudo systemctl enable --now power-profiles-daemon.service &>> $INSTLOG
-    sleep 2
-    sudo systemctl enable --now supergfxd &>> $INSTLOG
-    sleep 2
-
-    # add the ROG keybinding file to the config
-    echo -e "\nsource = ~/.config/hypr/rog-g15-strix-2021-binds.conf" >> ~/.config/hypr/hyprland.conf
-fi
+echo "starting network manager .."
 sudo systemctl enable NetworkManager.service
 sudo systemctl start NetworkManager.service
+echo "done ...!"
+
 ### Script is done ###
 echo -e "$CNT - Script had completed!"
 if [[ "$ISNVIDIA" == true ]]; then 
