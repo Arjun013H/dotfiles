@@ -46,6 +46,7 @@ install_stage=(
     swaylock-effects 
     wofi 
     wlogout 
+    lsd
     xdg-desktop-portal-hyprland 
     swappy 
     grim 
