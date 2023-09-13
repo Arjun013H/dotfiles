@@ -9,25 +9,22 @@
 
   "modules-left": [
     "custom/launcher",
-    "custom/separator",
     "cpu",
     "memory",
     "custom/window-name",
-    "custom/dot-alt",
     "temperature",
-    "custom/dot",
-    "custom/pacman",
-    "custom/uptime"
+    "custom/bluetooth"
   ],
-  "modules-center": ["hyperland/workspaces"],
+  "modules-center": [
+        "custom/wrap-left",
+        "hyprland/workspaces",
+        "custom/wrap-right"
+        ],
   "modules-right": [
     "battery",
     "backlight",
     "pulseaudio",
-    "custom/right-arr",
-    "custom/separator",
     "network",
-    "custom/clock-icon",
     "clock"
   ],
   "custom/playerctl": {
@@ -55,40 +52,37 @@
     "on-click": "filelight /",
     "on-click-right": "filelight /home/"
   },
-  "hyperland/workspaces": {
-    "all-outputs": true,
-    "active-only": false,
-    "on-click": "activate",
-    "format": "{icon}",
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "6": "",
-      "7": "",
-      "8": "",
-      "9": "",
-      "urgent": "",
-      "active": "",
-      "default": ""
-    }
-  },
+    "hyperland/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "all-outputs": true,
+      "persistent_workspaces" :{
+          "1": [],
+	 		    "2": [],
+	 		    "3": [],
+	 		    "4": [],
+	 		    "5": [],
+	 		    "6": [],
+	 		    "7": [],
+	 		    "8": [],
+	 		    "9": [],
+	 		    "10": []
+        },
 
-  "tray": {
-    "icon-size": 20,
-    "spacing": 8
-  },
-  "custom/filler": {
-    "format": ""
-  },
-  "custom/clock-icon": {
-    "format": ""
-  },
-
+                "format-icons": {
+                "1": "1",
+             		"2": "2",
+             		"3": "3",
+             		"4": "4",
+             		"5": "5",
+             		"6": "6",
+             		"7": "7",
+             		"8": "8",
+             		"9": "9",
+             		"10": "10"
+          }
+    },
+ 
   "clock": {
     "format": "<b>{:%I:%M %p }</b>",
     "format-alt": "<b>{:%a.%d,%b}</b>",
@@ -137,7 +131,6 @@
     "on-click-right": "pavucontrol"
   },
   "battery": {
-    "bat": "BAT0",
     "interval": 30,
     "states": {
       "warning": 30,
@@ -149,14 +142,9 @@
     "max-length": 25,
     "tooltip": false
   },
-  "custom/right-arr": {
-    "format": "  "
-  },
+  
   "custom/launcher": {
     "format": "  󰣇"
-  },
-  "custom/separator": {
-    "format": " "
   },
   "custom/window-name": {
     "format": " <b>{}</b>",
@@ -164,24 +152,11 @@
     "exec": "hyprctl activewindow | grep class | awk '{print $2}'"
   },
 
- "custom/pacman": {
+ "custom/bluetooth": {
    "format": "  ",
    "on-click": "blueberry"
  },
-  "custom-pacman-update-icon-background": {
-    "format": ""
-  },
-  "custom/pacman-update-icon": {
-    "format": ""
-  },
-  "custom/pacman-update": {
-    "format": " {}",
-    "interval": 3600,
-    "exec": "checkupdates | wc -l",
-    "signal": 8
-  },
-  "custom/window-icon": {},
-
+ 
   "temperature": {
     "thermal-zone": 0,
     "critical-threshold": 80,
