@@ -19,7 +19,7 @@ window#waybar {
 
 #custom-launcher {
   font-size: 20px;
-  color: #4E3355;
+  color: #C44040;
   padding-right: 10px;
   background-color: rgba(15,17,19,1);
 }
@@ -32,33 +32,33 @@ window#waybar {
 }
 
 #cpu {
-  color: #4E3355;
+  color: #C44040;
   padding: 0px 10px 0px 12px;
   border-radius: 5px 0px 0px 5px;
   background-color: rgba(15,17,19,1);
 }
 
 #memory {
-  color: #4E3355;
+  color: #C44040;
   padding: 0px 10px 0px 0px;
   border-radius: 0px 5px 5px 0px;
   background-color: rgba(15,17,19,1);
 }
 
 #temperature {
-  color: #4E3355;
+  color: #C44040;
   padding: 0px 12px 0px 0px;
   border-radius: 0px 5px 5px 0px;
   background-color: rgba(15,17,19,1);
 }
 
 #custom-window-name {
-  color: #4E3355;
+  color: #C44040;
   margin-right: 10px;
   background-color: rgba(15,17,19,1);
 }
 #custom-wrap-left, #custom-wrap-right{
-  color: #4E3355;
+  color: #C44040;
   background-color: rgba(15,17,19,1);
 }
 
@@ -66,25 +66,25 @@ window#waybar {
 
 
 #workspaces button {
-  color: #4E3355; 
+  color: #C44040; 
   background-color: rgba(15,17,19,1); 
 
 }
 
 #workspaces button.active {
-  color: #ceaca6;
+  color: #ecdedd;
 }
 
 
 
 
 #workspaces button.active {
-  color: #ceaca6;
+  color: #ecdedd;
 }
 
 
 #battery {
-  color: #4E3355;
+  color: #C44040;
   margin: 0px 10px 0px 0px;
 }
 
@@ -97,53 +97,53 @@ window#waybar {
 }
 
 #backlight {
-  color: #4E3355;
+  color: #C44040;
   padding: 0px 10px 0px 10px;
   border-radius: 5px 0px 0px 5px;
   background-color: rgba(15,17,19,1);
 }
 
 #pulseaudio {
-  color: #4E3355;
+  color: #C44040;
   padding: 0px 10px 0px 0px;
   border-radius: 0px 5px 5px 0px;
 }
 
 #custom-right-arr {
-  color: #4E3355;
+  color: #C44040;
   background-color: rgba(15,17,19,1);
 }
 
 #custom-bluetooth {
-  color: #4E3355;
+  color: #C44040;
   background-color: rgba(15,17,19,1);
 }
 
 #network {
-  color: #4E3355;
+  color: #C44040;
   margin-right: 10px;
   background-color: rgba(15,17,19,1);
 }
 
 #custom-dot {
-  color: #4E3355;
+  color: #C44040;
   padding-right: 10px;
   background-color: rgba(15,17,19,1);
 }
 
 #custom-dot-alt {
-  color: #4E3355;
+  color: #C44040;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 #disk {
-  color: #4E3355;
+  color: #C44040;
   background-color: rgba(15,17,19,1);
 }
 
 #custom-clock-icon {
-  color: #4E3355;
+  color: #C44040;
   padding-left: 10px;
   padding-right: 10px;
   margin-top: 5px;
@@ -152,7 +152,7 @@ window#waybar {
 }
 
 #custom-filler {
-  color: #4E3355;
+  color: #C44040;
   padding-left: 0px;
   padding-right: 9px;
   margin-top: 5px;
@@ -161,7 +161,7 @@ window#waybar {
 }
 
 #clock {
-  color: #4E3355;
+  color: #C44040;
   padding-left: 10px;
 }
 
