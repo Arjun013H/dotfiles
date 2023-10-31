@@ -1,6 +1,6 @@
 window {
   margin: 0px;
-  border: 5px solid #9F0E0E;
+  border: 5px solid #F4E267;
   background-color: rgba(11, 10, 16, 0.9);
   border-radius: 15px;
 }
@@ -43,7 +43,7 @@ window {
 }
 
 #text:selected {
-  color: #9F0E0E;
+  color: #F4E267;
   margin: 0px 0px;
   border: none;
   border-radius: 15px;
@@ -60,5 +60,5 @@ window {
   margin: 0px 0px;
   border: none;
   border-radius: 15px;
-  background: linear-gradient(90deg, #dedede 0%, #dedede 100%);
+  background: linear-gradient(90deg, #e9ede6 0%, #e9ede6 100%);
 }
