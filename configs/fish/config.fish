@@ -22,8 +22,8 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 
 set office "/app/onlyoffice/DocumentServer/lib/documentserver-example/files/"
-# set BROWSER firefox
-set BROWSER google-chrome-stable
+set BROWSER firefox
+# set BROWSER google-chrome-stable
 
 
 set hubbox "/run/media/arjun/New Volume/Guest OS/VunHub"
